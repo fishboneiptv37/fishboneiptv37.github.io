@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Site-09-09_2315",
-    "currentPage": "page4.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise-amp",
       "title": "Mobirise AMP",
@@ -50,7 +50,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 12,
+    "uniqCompNum": 13,
     "versionPublish": "4.12.4",
     "screenshot": "screenshot.png"
   },
@@ -96,6 +96,87 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            ".builder-sidebar, .dropdown-menu": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            ".ampstart-btn, amp-sidebar": {
+              "display": "block",
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".nav-dropdown a": {
+              "padding": "0.5rem 0 !important",
+              "margin": "0 0 10px !important"
+            },
+            ".navbar .navbar-collapse": {
+              "display": "none",
+              "&.show": {
+                "display": "block",
+                "position": "absolute",
+                "top": "0",
+                "& when (@sidebarSide = 'right')": {
+                  "right": "0"
+                },
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                },
+                "height": "100vh",
+                "overflow-y": "auto",
+                "padding": "70px 2rem 1rem",
+                "z-index": "1",
+                "background": "@menuBgColor"
+              }
+            },
+            ".dropdown.open > .dropdown-menu, .dropdown:hover > .dropdown-menu, .dropdown-item.dropdown-toggle": {
+              "left": "0",
+              "position": "relative"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-menu .dropdown-toggle:after": {
+                "transform": "rotate(90deg)"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "img": {
+                "object-fit": "contain"
+              }
+            },
+            ".brand-name": {
+              "color": "#197bc6"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu  horizontal-menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global once=\"menu\" always-top position-absolute>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Height\" inline name=\"logoHeight\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline name=\"logoWidth\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected>Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#197bc6\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n    <div class=\"menu-container mbr-jc-s container-fluid\">\n      <div class=\"navbar-brand\">\n          <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" layout=\"responsive\" width=\"79.41176470588235\" height=\"45\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                  <div placeholder class=\"placeholder\"></div>\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" alt=\"Mobirise\" title>\n              </amp-img>\n          </span>\n          <p mbr-text mbr-theme-style=\"display-5\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style mbr-bold\" data-app-selector=\".brand-name\"><a href=\"index.html\">FisHbone IpTv</a></p>\n      </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n        <div class=\"hamburger\">\n          <span></span>\n          <span></span>\n          <span></span>\n          <span></span>\n        </div>\n        </button>\n        <!-- NAVBAR ITEMS -->\n        <ul mbr-menu class=\"navbar-nav nav-dropdown mbr-column\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item dropdown\">\n            <a class=\"nav-link link text-secondary dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"true\">Home</a><div class=\"dropdown-menu\"><div class=\"dropdown\"><a class=\"text-secondary dropdown-item dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\">New Item</a><div class=\"dropdown-menu dropdown-submenu\"><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a></div></div></div>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">About us</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contacts</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">FAQ</a>\n          </li></ul>\n        <!-- NAVBAR ITEMS END -->\n        <!-- SHOW BUTTON -->\n        <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\">\n          <a class=\"btn btn-md btn-black mbr-bold\" href=\"#\">Join us</a>\n        </div>\n        <!-- SHOW BUTTON END -->\n      </div>\n      <!-- COLLAPSED MENU END -->\n      <button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n      <div class=\"hamburger\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </div>\n      </button>\n      <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showLinks||showButtons)\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n    </div>\n  </nav>\n  <!-- AMP plug -->\n  <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n    <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n      <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n      <span></span>\n      <span></span>\n      </button>\n    </div>\n  </amp-sidebar>\n    \n</section>",
+          "_cid": "sc32KaBOIw",
+          "_anchor": "menu1-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
         }
       ]
     },
@@ -135,6 +216,87 @@
           "_protectedParams": [],
           "_global": false,
           "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            ".builder-sidebar, .dropdown-menu": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            ".ampstart-btn, amp-sidebar": {
+              "display": "block",
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".nav-dropdown a": {
+              "padding": "0.5rem 0 !important",
+              "margin": "0 0 10px !important"
+            },
+            ".navbar .navbar-collapse": {
+              "display": "none",
+              "&.show": {
+                "display": "block",
+                "position": "absolute",
+                "top": "0",
+                "& when (@sidebarSide = 'right')": {
+                  "right": "0"
+                },
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                },
+                "height": "100vh",
+                "overflow-y": "auto",
+                "padding": "70px 2rem 1rem",
+                "z-index": "1",
+                "background": "@menuBgColor"
+              }
+            },
+            ".dropdown.open > .dropdown-menu, .dropdown:hover > .dropdown-menu, .dropdown-item.dropdown-toggle": {
+              "left": "0",
+              "position": "relative"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-menu .dropdown-toggle:after": {
+                "transform": "rotate(90deg)"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "img": {
+                "object-fit": "contain"
+              }
+            },
+            ".brand-name": {
+              "color": "#197bc6"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu  horizontal-menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global once=\"menu\" always-top position-absolute>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Height\" inline name=\"logoHeight\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline name=\"logoWidth\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected>Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#197bc6\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n    <div class=\"menu-container mbr-jc-s container-fluid\">\n      <div class=\"navbar-brand\">\n          <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" layout=\"responsive\" width=\"79.41176470588235\" height=\"45\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                  <div placeholder class=\"placeholder\"></div>\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" alt=\"Mobirise\" title>\n              </amp-img>\n          </span>\n          <p mbr-text mbr-theme-style=\"display-5\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style mbr-bold\" data-app-selector=\".brand-name\"><a href=\"index.html\">FisHbone IpTv</a></p>\n      </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n        <div class=\"hamburger\">\n          <span></span>\n          <span></span>\n          <span></span>\n          <span></span>\n        </div>\n        </button>\n        <!-- NAVBAR ITEMS -->\n        <ul mbr-menu class=\"navbar-nav nav-dropdown mbr-column\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item dropdown\">\n            <a class=\"nav-link link text-secondary dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"true\">Home</a><div class=\"dropdown-menu\"><div class=\"dropdown\"><a class=\"text-secondary dropdown-item dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\">New Item</a><div class=\"dropdown-menu dropdown-submenu\"><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a></div></div></div>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">About us</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contacts</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">FAQ</a>\n          </li></ul>\n        <!-- NAVBAR ITEMS END -->\n        <!-- SHOW BUTTON -->\n        <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\">\n          <a class=\"btn btn-md btn-black mbr-bold\" href=\"#\">Join us</a>\n        </div>\n        <!-- SHOW BUTTON END -->\n      </div>\n      <!-- COLLAPSED MENU END -->\n      <button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n      <div class=\"hamburger\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </div>\n      </button>\n      <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showLinks||showButtons)\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n    </div>\n  </nav>\n  <!-- AMP plug -->\n  <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n    <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n      <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n      <span></span>\n      <span></span>\n      </button>\n    </div>\n  </amp-sidebar>\n    \n</section>",
+          "_cid": "sc32KaBOIw",
+          "_anchor": "menu1-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
           "_params": {}
         }
       ]
@@ -176,6 +338,87 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            ".builder-sidebar, .dropdown-menu": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            ".ampstart-btn, amp-sidebar": {
+              "display": "block",
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".nav-dropdown a": {
+              "padding": "0.5rem 0 !important",
+              "margin": "0 0 10px !important"
+            },
+            ".navbar .navbar-collapse": {
+              "display": "none",
+              "&.show": {
+                "display": "block",
+                "position": "absolute",
+                "top": "0",
+                "& when (@sidebarSide = 'right')": {
+                  "right": "0"
+                },
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                },
+                "height": "100vh",
+                "overflow-y": "auto",
+                "padding": "70px 2rem 1rem",
+                "z-index": "1",
+                "background": "@menuBgColor"
+              }
+            },
+            ".dropdown.open > .dropdown-menu, .dropdown:hover > .dropdown-menu, .dropdown-item.dropdown-toggle": {
+              "left": "0",
+              "position": "relative"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-menu .dropdown-toggle:after": {
+                "transform": "rotate(90deg)"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "img": {
+                "object-fit": "contain"
+              }
+            },
+            ".brand-name": {
+              "color": "#197bc6"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu  horizontal-menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global once=\"menu\" always-top position-absolute>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Height\" inline name=\"logoHeight\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline name=\"logoWidth\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected>Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#197bc6\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n    <div class=\"menu-container mbr-jc-s container-fluid\">\n      <div class=\"navbar-brand\">\n          <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" layout=\"responsive\" width=\"79.41176470588235\" height=\"45\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                  <div placeholder class=\"placeholder\"></div>\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" alt=\"Mobirise\" title>\n              </amp-img>\n          </span>\n          <p mbr-text mbr-theme-style=\"display-5\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style mbr-bold\" data-app-selector=\".brand-name\"><a href=\"index.html\">FisHbone IpTv</a></p>\n      </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n        <div class=\"hamburger\">\n          <span></span>\n          <span></span>\n          <span></span>\n          <span></span>\n        </div>\n        </button>\n        <!-- NAVBAR ITEMS -->\n        <ul mbr-menu class=\"navbar-nav nav-dropdown mbr-column\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item dropdown\">\n            <a class=\"nav-link link text-secondary dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"true\">Home</a><div class=\"dropdown-menu\"><div class=\"dropdown\"><a class=\"text-secondary dropdown-item dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\">New Item</a><div class=\"dropdown-menu dropdown-submenu\"><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a></div></div></div>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">About us</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contacts</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">FAQ</a>\n          </li></ul>\n        <!-- NAVBAR ITEMS END -->\n        <!-- SHOW BUTTON -->\n        <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\">\n          <a class=\"btn btn-md btn-black mbr-bold\" href=\"#\">Join us</a>\n        </div>\n        <!-- SHOW BUTTON END -->\n      </div>\n      <!-- COLLAPSED MENU END -->\n      <button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n      <div class=\"hamburger\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </div>\n      </button>\n      <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showLinks||showButtons)\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n    </div>\n  </nav>\n  <!-- AMP plug -->\n  <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n    <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n      <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n      <span></span>\n      <span></span>\n      </button>\n    </div>\n  </amp-sidebar>\n    \n</section>",
+          "_cid": "sc32KaBOIw",
+          "_anchor": "menu1-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
         }
       ]
     },
@@ -216,6 +459,87 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            ".builder-sidebar, .dropdown-menu": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            ".ampstart-btn, amp-sidebar": {
+              "display": "block",
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".nav-dropdown a": {
+              "padding": "0.5rem 0 !important",
+              "margin": "0 0 10px !important"
+            },
+            ".navbar .navbar-collapse": {
+              "display": "none",
+              "&.show": {
+                "display": "block",
+                "position": "absolute",
+                "top": "0",
+                "& when (@sidebarSide = 'right')": {
+                  "right": "0"
+                },
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                },
+                "height": "100vh",
+                "overflow-y": "auto",
+                "padding": "70px 2rem 1rem",
+                "z-index": "1",
+                "background": "@menuBgColor"
+              }
+            },
+            ".dropdown.open > .dropdown-menu, .dropdown:hover > .dropdown-menu, .dropdown-item.dropdown-toggle": {
+              "left": "0",
+              "position": "relative"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-menu .dropdown-toggle:after": {
+                "transform": "rotate(90deg)"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "img": {
+                "object-fit": "contain"
+              }
+            },
+            ".brand-name": {
+              "color": "#197bc6"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu  horizontal-menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global once=\"menu\" always-top position-absolute>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Height\" inline name=\"logoHeight\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline name=\"logoWidth\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected>Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#197bc6\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n    <div class=\"menu-container mbr-jc-s container-fluid\">\n      <div class=\"navbar-brand\">\n          <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" layout=\"responsive\" width=\"79.41176470588235\" height=\"45\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                  <div placeholder class=\"placeholder\"></div>\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" alt=\"Mobirise\" title>\n              </amp-img>\n          </span>\n          <p mbr-text mbr-theme-style=\"display-5\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style mbr-bold\" data-app-selector=\".brand-name\"><a href=\"index.html\">FisHbone IpTv</a></p>\n      </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n        <div class=\"hamburger\">\n          <span></span>\n          <span></span>\n          <span></span>\n          <span></span>\n        </div>\n        </button>\n        <!-- NAVBAR ITEMS -->\n        <ul mbr-menu class=\"navbar-nav nav-dropdown mbr-column\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item dropdown\">\n            <a class=\"nav-link link text-secondary dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"true\">Home</a><div class=\"dropdown-menu\"><div class=\"dropdown\"><a class=\"text-secondary dropdown-item dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\">New Item</a><div class=\"dropdown-menu dropdown-submenu\"><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a></div></div></div>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">About us</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contacts</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">FAQ</a>\n          </li></ul>\n        <!-- NAVBAR ITEMS END -->\n        <!-- SHOW BUTTON -->\n        <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\">\n          <a class=\"btn btn-md btn-black mbr-bold\" href=\"#\">Join us</a>\n        </div>\n        <!-- SHOW BUTTON END -->\n      </div>\n      <!-- COLLAPSED MENU END -->\n      <button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n      <div class=\"hamburger\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </div>\n      </button>\n      <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showLinks||showButtons)\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n    </div>\n  </nav>\n  <!-- AMP plug -->\n  <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n    <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n      <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n      <span></span>\n      <span></span>\n      </button>\n    </div>\n  </amp-sidebar>\n    \n</section>",
+          "_cid": "sc32KaBOIw",
+          "_anchor": "menu1-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
         }
       ]
     },
@@ -255,6 +579,87 @@
           "_protectedParams": [],
           "_global": false,
           "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            ".builder-sidebar, .dropdown-menu": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            ".ampstart-btn, amp-sidebar": {
+              "display": "block",
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".nav-dropdown a": {
+              "padding": "0.5rem 0 !important",
+              "margin": "0 0 10px !important"
+            },
+            ".navbar .navbar-collapse": {
+              "display": "none",
+              "&.show": {
+                "display": "block",
+                "position": "absolute",
+                "top": "0",
+                "& when (@sidebarSide = 'right')": {
+                  "right": "0"
+                },
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                },
+                "height": "100vh",
+                "overflow-y": "auto",
+                "padding": "70px 2rem 1rem",
+                "z-index": "1",
+                "background": "@menuBgColor"
+              }
+            },
+            ".dropdown.open > .dropdown-menu, .dropdown:hover > .dropdown-menu, .dropdown-item.dropdown-toggle": {
+              "left": "0",
+              "position": "relative"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-menu .dropdown-toggle:after": {
+                "transform": "rotate(90deg)"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "img": {
+                "object-fit": "contain"
+              }
+            },
+            ".brand-name": {
+              "color": "#197bc6"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu  horizontal-menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global once=\"menu\" always-top position-absolute>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Height\" inline name=\"logoHeight\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline name=\"logoWidth\" min=\"35\" max=\"120\" value=\"45\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected>Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#197bc6\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n    <div class=\"menu-container mbr-jc-s container-fluid\">\n      <div class=\"navbar-brand\">\n          <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" layout=\"responsive\" width=\"79.41176470588235\" height=\"45\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                  <div placeholder class=\"placeholder\"></div>\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/screenshot-2018-01-16-23-51-41-029-com.niklabs.pp-90x51.png\" alt=\"Mobirise\" title>\n              </amp-img>\n          </span>\n          <p mbr-text mbr-theme-style=\"display-5\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style mbr-bold\" data-app-selector=\".brand-name\"><a href=\"index.html\">FisHbone IpTv</a></p>\n      </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n        <div class=\"hamburger\">\n          <span></span>\n          <span></span>\n          <span></span>\n          <span></span>\n        </div>\n        </button>\n        <!-- NAVBAR ITEMS -->\n        <ul mbr-menu class=\"navbar-nav nav-dropdown mbr-column\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item dropdown\">\n            <a class=\"nav-link link text-secondary dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"true\">Home</a><div class=\"dropdown-menu\"><div class=\"dropdown\"><a class=\"text-secondary dropdown-item dropdown-toggle\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\">New Item</a><div class=\"dropdown-menu dropdown-submenu\"><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a><a class=\"text-secondary dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a></div></div></div>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">About us</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contacts</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link link text-secondary\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">FAQ</a>\n          </li></ul>\n        <!-- NAVBAR ITEMS END -->\n        <!-- SHOW BUTTON -->\n        <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\">\n          <a class=\"btn btn-md btn-black mbr-bold\" href=\"#\">Join us</a>\n        </div>\n        <!-- SHOW BUTTON END -->\n      </div>\n      <!-- COLLAPSED MENU END -->\n      <button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showLinks || showButtons\">\n      <div class=\"hamburger\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </div>\n      </button>\n      <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showLinks||showButtons)\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n    </div>\n  </nav>\n  <!-- AMP plug -->\n  <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n    <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n      <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n      <span></span>\n      <span></span>\n      </button>\n    </div>\n  </amp-sidebar>\n    \n</section>",
+          "_cid": "sc32KaBOIw",
+          "_anchor": "menu1-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
           "_params": {}
         }
       ]
